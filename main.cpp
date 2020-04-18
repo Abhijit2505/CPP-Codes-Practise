@@ -1,28 +1,32 @@
+///This program illustrates the use of c-string.
+
+///strcmp() compares if the two strings given are not equal.
+///If not equal it returns true and if equal it returns false.
+
+
 #include <iostream>
+#include <cstring>///To use string predefined functions.
 
 using namespace std;
 
 int main()
 {
-    double w,h,a,bmr,n;
-    char s;
-    cout << "Enter your sex : ";
-    cin >> s;
-    cout << "Enter your weight : ";
-    cin >> w;
-    cout << "Enter your height : ";
-    cin >> h;
-    cout << "Enter your age : ";
-    cin >> a;
-    if((s =='m')||(s == 'M'))
-    {
-        bmr=66+(6.3*w)+(12.9*h)-(6.8*a);
-    }
-    else
-    {
-         bmr=655+(4.3*w)+(4.7*h)-(4.7*a);
-    }
-        n = bmr/230;
-        cout << "You can eat " << n << " chocolate bars";
-        return 0;
+   char c_string1[]="Hello";
+   char c_string2[]="Hell";
+   if(strcmp(c_string1,c_string2))///This predefined function returns false(0) if the strings are equal.
+   {
+       cout << "The strings are not equal\n";
+   }
+   else
+   {
+       cout << "The strings are equal\n";
+   }
+   int p=strlen(c_string1);///calculates the length of the string and returns an integer.
+   cout << p << endl;
+   string r=strcat(c_string1," guys");
+   cout << r;
+
+
+   return 0;
+
 }
